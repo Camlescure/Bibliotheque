@@ -1,0 +1,20 @@
+<nav class="navbar navbar-default" style="background-color:rgb(173, 237, 190, 0.4)">
+	<div style="display:flex; flex-direction:row; justify-content: space-between;">
+		<ul class="nav navbar-nav" style="list-style:none">
+			<li routerLinkActive="active">
+				<a routerLink="books">Livres</a>
+			</li>
+		</ul>
+		<ul style="display:flex; flex-direction:row; list-style:none" class="nav navbar-nav navbar-right">
+			<li routerLinkActive="active" *ngIf = "!isAuth">
+				<a routerLink="auth/signup" style="margin-right:20px">Créer un compte</a>
+			</li>
+			<li routerLinkActive="active" *ngIf = "!isAuth" style="margin-right:5px">
+				<a routerLink="auth/signin">Connexion</a>
+			</li>
+			<li>
+				<a (click)="onSignOut()" style="cursor:pointer" *ngIf = "isAuth" style="margin-right:5px"> Déconnexion </a>
+			</li>
+		</ul>
+	</div>
+</nav>
