@@ -19,7 +19,7 @@ export class BookFormComponent implements OnInit {
   constructor(private router: Router, private booksService: BooksService, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
-  	this.initForm;
+  	this.initForm();
   }
 
   initForm(){
